@@ -1,0 +1,26 @@
+/*
+# Cache for 7 days
+Cache-Control: max-age=604800
+
+# Enable HTTP Strict Transport Security (HSTS) to force clients to always
+# connect via HTTPS (do not use if only testing)
+Strict-Transport-Security: max-age=2592000; includeSubDomains; preload
+
+# Allows you to define approved sources for content on your site that the browser can load. 
+Content-Security-Policy: default-src 'self' towelzphotography.com *.towelzphotography.com; script-src 'self' https://ajax.googleapis.com https://s.ytimg.com https://www.youtube.com https://code.jquery.com 'unsafe-inline' 'unsafe-eval'; object-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://i.ytimg.com https://www.zymic.com; media-src 'self'; frame-src 'self' https://www.youtube.com; font-src 'self'
+
+X-Content-Security-Policy: default-src 'self' towelzphotography.com *.towelzphotography.com; script-src 'self' https://ajax.googleapis.com https://s.ytimg.com https://www.youtube.com https://code.jquery.com 'unsafe-inline' 'unsafe-eval'; object-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://i.ytimg.com https://www.zymic.com; media-src 'self'; frame-src 'self' https://www.youtube.com; font-src 'self'
+
+X-WebKit-CSP: default-src 'self' towelzphotography.com *.towelzphotography.com; script-src 'self' https://ajax.googleapis.com https://s.ytimg.com https://www.youtube.com https://code.jquery.com 'unsafe-inline' 'unsafe-eval'; object-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://i.ytimg.com https://www.zymic.com; media-src 'self'; frame-src 'self' https://www.youtube.com; font-src 'self'
+
+# Enable cross-site filter (XSS) and tell browser to block detected attacks
+X-XSS-Protection: 1; mode=block
+
+# Prevent some browsers from MIME-sniffing a response away from the declared Content-Type
+X-Content-Type-Options: nosniff
+
+# Disallow the site to be rendered within a frame (clickjacking protection)
+X-Frame-Options: SAMEORIGIN
+
+# The destination site receives information about the origin the user came from.
+Referrer-Policy: origin-when-cross-origin
