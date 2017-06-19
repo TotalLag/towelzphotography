@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+
+  <!-- Site details -->
+  <meta name="description" content="Wedding photography, senior photos, portraits, events and more.">
+  <meta name="keywords" content="">
+  <meta name="language" content="en">
+  <meta name="copyright" content="2016 towelz phtography. All rights reserved">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+       <!-- Facebook -->
+    <meta property="og:title" content="Towelz Photography" />
+    <meta property="og:type" content="business.business" />
+    <meta property="og:url" content="https://towelzphotography.com" />
+    <meta property="og:description" content="Wedding photography, senior photos, portraits, events and more." />
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Towelz Photography" />
+    <meta name="twitter:description" content="Wedding photography, senior photos, portraits, events and more." /> 
+  <!-- Character encoding -->
+ 
+  <!-- Favourite/bookmark icon -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	
+  <!-- Stylesheets -->
+  	<link rel="stylesheet" href="styles/main-body.css" type="text/css">
+  	<link rel="stylesheet" id="menu-css"  href="../styles/menu.css" type="text/css" media="all">  
+    <link rel="stylesheet" href="../unitegallery/css/unite-gallery.css" type="text/css" />
+    <link rel="stylesheet" id="camera-css"  href="../styles/camera.css" type="text/css" media="all">  
+
+  <!-- Javascript -->
+
+	<script type="text/javascript" src="../unitegallery/js/jquery-11.0.min.js"></script>	
+	<script type="text/javascript" src="../unitegallery/js/unitegallery.min.js"></script>	
+	<script type="text/javascript" src="../unitegallery/themes/tiles/ug-theme-tiles.js"></script>	
+
+     <script type="text/javascript" src="../unitegallery/themes/slider/ug-theme-slider.js"></script>   
+    
+
+  <!-- Document title -->
+
+    <title>TP Weddings</title> 
+
+</head>
+<body>
+<br/>
+<br/>
+<center><a href="../index.html"><img src="../images/logomain.png" id="logo"></a>
+<nav>												<b>|</b>
+    <a href="../index.html" class="links">Home</a>		<b>|</b>
+    <strong>Weddings</strong>						<b>|</b>
+    <a href="portraits.html">Portraits</a>			<b>|</b>
+    <a href="misc.html">Misc</a>					<b>|</b>
+    <a href="contact.html">Contact Us</a>			<b>|</b>
+   
+</nav> 
+</center>
+<br/>
+<br/>
+    <center>
+    		<div id="gallery" style="margin:0px auto;display:none;">
+		
+						<img alt="Highlight Wedding"
+						    data-type="youtube"  src=""
+						     data-image=""
+						     data-description="Dan and Julia Wedding"
+						     data-videoid="hTpwiv68ktY" style="display:none">	
+		
+		</div>
+    <br/>
+    <br/>
+    <div id="wedding" style="display:none; width: 900px;">
+
+	</div>
+    </center> 
+
+   	<script>
+	
+	var imgNameArray = new Array("Engagement-1", "Engagement-2", "Engagement-3", "Engagement-4", "Engagement-5",
+								 "Engagement-6", "Engagement-7", "Engagement-8", "Engagement-9", "Engagement-10",
+								  "Engagement-11", "Engagement-12", "Engagement-13", "Engagement-14", "Engagement-16", 
+								  "Engagement-18", "Engagement-19", "Engagement-21", "Engagement-23", "Engagement-25",
+								  "Engagement-26", "Engagement-30", "Engagement-32", "Engagement-33", "Engagement-37");
+								 
+	function randOrd() { return (Math.round(Math.random())-0.5); }
+	
+	imgNameArray.sort(randOrd);		
+	
+	function buildGallery() {
+		var galleryDiv = document.getElementById("wedding");
+		var html = "";
+		for (var i = 0; i < imgNameArray.length; i++) {
+			html += "<img alt='Wedding [ " + i + " ]' src='../images/wedding/" + imgNameArray[i] + "-thumb.jpg' data-image='../images/wedding/" + imgNameArray[i] + ".jpg' style='display:none'/>";
+		}
+		
+		galleryDiv.innerHTML = html;
+	}
+	
+	buildGallery();
+	
+	
+	</script> 
+    
+      	<script>
+
+		jQuery(document).ready(function(){
+
+			jQuery("#wedding").unitegallery({
+				tiles_type:"nested"
+			});
+	
+			jQuery("#gallery").unitegallery({
+					gallery_theme: "slider"
+				});
+	
+			});
+
+		</script>
+
+
+    
+
+
+
+    <div style="clear:both; display:block; height:100px"></div>
+</body>
+
+</html>

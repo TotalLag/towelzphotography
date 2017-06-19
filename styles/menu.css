@@ -1,0 +1,34 @@
+nav
+{
+	font-size: 12px;
+}
+
+a:link
+{
+	color: #4D4D4D;
+	text-decoration: none;	
+}
+
+a:hover
+{
+	color: #0FD900;	
+}
+
+a:visited
+{
+	color: black;
+}
+
+#logo {
+	width: 60%;
+}
+
+.left {
+	align-content: left;
+	
+}
+
+.right {
+	align-content: right;
+	
+}
